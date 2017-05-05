@@ -8,13 +8,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link rel="stylesheet" href="css/vendor/normalize.css">
+<link rel="stylesheet" href="css/vendor/_normalize.css">
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]--> 
+<!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
 <!-- <div class="main-bg"><img src="images/bg-main.png" /></div> -->
 <section class="intro">
@@ -28,27 +28,22 @@
       <img class="monitor-img" src="images/bg-monitor.png" />
       <div class="monitor-inner">
         <img class="logo" src="images/logo.svg" />
-      </div>
-    </div>
-
-    <div class="cta">
-      <div class="row">
-        <div class="small-2 columns">
-          <a class="button" href="javascript:void(0);">Download Resume</a> 
-        </div>
-        <div class="small-2 columns">
-          <a class="button" href="javascript:void(0);">Download Portfolio Samples</a>
+        <div class="cta-downloads hide-small-only">
+          <a class="button" href="docs/aaron_rose_resume.pdf">Resume (PDF)</a><a class="button" href="docs/PORTFOLIO-PACK-20161130.zip">Work Samples (Zip)</a>
         </div>
       </div>
-    </div>
+  </div>
 </section>
 
 <section class="outtro">
-  <!-- Display below monitor -->
+  <div class="cta-downloads show-small-only">
+    <a class="button" href="docs/aaron_rose_resume.pdf">Resume (PDF)</a><a class="button" href="docs/PORTFOLIO-PACK-20161130.zip">Work Samples (Zip)</a>
+  </div>
+  <p class="heading">Also check out some of my work on <a target="_blank" href="https://www.linkedin.com/in/rosedesign/"><img class="linkedin" src="images/linkedin.svg" /></a></p>
 </section>
 
 <script defer src="js/vendor/svgxuse.js"></script>
-<script src="js/app.min.js"></script>
+<!-- <script src="js/app.min.js"></script> -->
 </body>
 </html>
 

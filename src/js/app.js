@@ -1,16 +1,17 @@
 /*eslint-env node, mocha, browser */
 var typeMe = function(selector, interval) { 
   var el = document.querySelectorAll(selector),
-      elItem,
-      elList = [],
-      elAll,
-      elText,
-      charStart,
-      charEnd,
-      style,
-      clearTimer,
-      cursor,
-      charContent;
+    elItem,
+    elList = [],
+    elAll,
+    elText,
+    charStart,
+    charEnd,
+    style,
+    clearTimer,
+    cursor,
+    j = 0,
+    charContent;
 
   for (var i=0; i < el.length; i++) {
     elList.push(el[i]);
@@ -31,6 +32,41 @@ var typeMe = function(selector, interval) {
   style.sheet.insertRule("@keyframes caret {50% {border-color: transparent;}}", 0);
   style.sheet.insertRule(".cursor{border-right: .2rem solid #FFF; animation: caret 1s steps(1) infinite;}"); 
   
+  
+  do {
+  	elAll = elList[j];
+    elText = elAll.innerHTML += "<span class='cursor'></span>";
+    charStart = 0;
+    charEnd = 0;
+
+    if (typeof interval === "undefined") {
+      interval = 100;
+    }
+      
+    (function(elAll) {
+      clearTimer = setInterval(function() {
+        var elNewText = elText.substr(charStart, charEnd);
+        var elAllChild = elAll.childNodes;
+        // Search through children nodes for specific class name.
+        for (var i = 0; i < elAllChild.length; i++) { 
+          if(elAllChild[i].classname == "cursor") {
+            cursor = elAllChild[i];
+          }
+        }   
+
+        elAll.innerHTML = elNewText;        
+        charEnd = charEnd + 1; //loops through the text in the element
+        
+        if (elNewText === elText) {
+          elAll.innerHTML += "<span class='cursor'></span>"
+          clearInterval(clearTimer); // Animation end
+          j++;
+        }                    
+      }, interval);      
+    })(elAll);  
+  } while (j < elList.length);
+
+/*
   for (var j=0; j < elList.length; j++) {   
     elAll = elList[j]; 
     elText = elAll.innerHTML += "<span class='cursor'></span>";
@@ -64,6 +100,7 @@ var typeMe = function(selector, interval) {
 
   }  
   return elAll;  
+  */
 };
 
 document.addEventListener("DOMContentLoaded", function(event) { 

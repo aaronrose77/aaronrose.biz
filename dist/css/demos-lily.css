@@ -1328,18 +1328,9 @@ body {
   text-align: center;
   margin: 2rem 0; }
 
-.intro h4 {
+.intro h3, .intro h4 {
   color: #828282;
-  font-weight: normal;
-  font-size: 1.6rem;
-  margin: 0;
-  padding: 0;
-  line-height: 2rem; }
-
-@media screen and (min-width: 40rem) {
-  .intro h4 {
-    font-size: 2rem;
-    line-height: 3rem; } }
+  font-weight: normal; }
 
 .monitor-content {
   /*  
@@ -1360,8 +1351,7 @@ body {
 .monitor-content {
   position: relative;
   overflow: visible;
-  z-index: 0;
-  margin-left: 8%; }
+  z-index: 0; }
 
 .monitor-content .monitor-img {
   /* position: absolute; */
@@ -1398,27 +1388,3 @@ body {
 @keyframes caret {
   50% {
     border-color: transparent; } }
-
-.cta-downloads {
-  text-align: center;
-  margin-bottom: 1rem; }
-
-.cta-downloads .button:first-child {
-  margin-right: 1rem; }
-
-.cta-downloads .button {
-  font-size: .9rem;
-  padding: .5rem 1rem;
-  margin: 0;
-  display: inline-block; }
-
-.outtro {
-  text-align: center; }
-
-.outtro .heading {
-  font-size: 1rem; }
-
-.outtro .linkedin {
-  width: 5rem;
-  display: inline-block;
-  vertical-align: -0.2rem; }

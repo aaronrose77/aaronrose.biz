@@ -95,23 +95,15 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 2rem 0;
 }
 
-.intro h4 {
+.intro h3, .intro h4 {
    color: #828282; 
    font-weight: normal;
-   font-size: 1.6rem;
-   margin: 0;
-   padding: 0;
-   line-height: 2rem;
 }
 
 
 @media screen and (min-width: 40rem) {
   .intro {
    // min-height: 15rem;
-  }
-  .intro h4 {
-    font-size: 2rem;
-    line-height: 3rem;
   }
 }
 
@@ -135,7 +127,6 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   overflow: visible;
   z-index: 0;
-  margin-left: 8%; // Trying to center monitor image.
 }
 .monitor-content .monitor-img {
   /* position: absolute; */
@@ -144,6 +135,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-right: -10%;
   width: 100%;
 }
+
 
 .monitor-content .monitor-inner {
     position: absolute;
@@ -173,42 +165,20 @@ h1, h2, h3, h4, h5, h6, p {
   border-right: .2rem solid #FFF;
   animation: caret 1s steps(1) infinite;
 }
-
 @keyframes caret {
   50% {
     border-color: transparent;
   }
 }
 
-.cta-downloads {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.cta-downloads .button:first-child {
-  margin-right: 1rem;
-}
-.cta-downloads .button {
-  font-size: .9rem;
-  padding: .5rem 1rem;
-  margin: 0;
-  display: inline-block;
-}
-
-.outtro {
-  text-align: center;
-}
-.outtro .heading {
-  font-size: 1rem;
-}
-.outtro .linkedin {
-  width: 5rem;
-  display: inline-block;
-  vertical-align: -0.2rem;
-}
-
 @media screen and (min-width: 0rem) and (max-width: 40rem) {
 
 }
+
+.outtro {
+
+}
+
 
 @media print,
 screen and (min-width: 40em) {
